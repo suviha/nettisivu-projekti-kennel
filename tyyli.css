@@ -1,0 +1,322 @@
+* {
+	box-sizing: border-box;
+	}
+body, html{
+	height:100%;
+}
+body {
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: #373F27;
+		color: #E9E7DA;
+	}
+.body_etusivu{
+	 background-image: url("akitapentuT.jpg");
+	 background-repeat: no-repeat;
+}
+.parent-div{
+	padding: 300px;
+}
+
+
+/*----- OTSIKOT JA TEKSTIT -----*/
+	.paaotsikot{
+		background-color:#d8b674;
+		padding:2px;
+		text-align:center;
+	}
+	p{
+		color: #E9E7DA;
+	}
+
+
+/*----- TAUSTA-PALLOT -----*/
+	.pallot{
+		border-radius: 50%;
+		position: absolute;
+		
+	}
+		#pallo1{
+			width: 406.13px;
+			height: 404.33px;
+			left: 0px;
+			top: 619.67px;
+			background: rgba(99, 107, 70, 0.3);
+		}
+		#pallo2{
+			width: 309.01px;
+			height: 307.64px;
+			left: 362.87px;
+			top: 220.62px;
+			background: rgba(205, 163, 79, 0.2);
+		}
+		#pallo3{
+			width: 182.76px;
+			height: 181.95px;
+			left: 1142.46px;
+			top: 508.04px;
+			background: rgba(233, 231, 218, 0.08);
+		}
+		#pallo4{
+			width: 300.18px;
+			height: 298.85px;
+			left: 1139.82px;
+			top: 0px;
+			background: rgba(99, 107, 70, 0.3);
+		}
+	
+	
+/*----- VALIKKO -----*/
+	.valikko {
+		  overflow: hidden;
+		  background-color: #CDA34F;
+	}
+
+	.valikko a {
+		  float: left;
+		  display: block;
+		  color: #E9E7DA;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 24px;
+	}
+
+	.valikko a:hover {
+		  background-color: #b38832;
+		  color: #E9E7DA;
+	}
+
+	.valikko a.active {
+		  background-color: #636B46;
+		  color: #E9E7DA;
+	}
+
+	.valikko .icon {
+		display: none;
+	}
+	
+	/* Selaimen ollessa alle 600px, näkyy vain Etusivu-painike ja muut linkit menevät kuvakkeen alle*/
+	@media screen and (max-width: 600px) 
+	{
+		.valikko a:not(:first-child) {display: none; font-size: 15px;}
+		.valikko a.icon {
+			float: right;
+			display: block;
+		 }
+	}
+/* Käyttäjän painaessa valikko-kuvaketta näkee käyttäjä loput valikon linkeistä allekkain */
+	@media screen and (max-width: 600px) 
+	{
+		 .valikko.responsive {position: relative; }
+		 .valikko.responsive .icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		  }
+		 .valikko.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+		  }
+	}
+
+	
+/*----- ETUSIVU -----*/
+	.etusivu-info{
+	  margin-top: 10%;
+	  margin-right: 50%;
+	  margin-left: 10%;
+	  background-color: black;
+	  border: 5px solid black;
+	  opacity: 0.4;
+	  text-align:center;
+	  float: left;
+	}
+	#kennel{
+		font-size: 65px;
+	}
+	#kuvaus{
+		font-size: 55px;
+	}
+				
+	/* Ota yhteyttä-painike/alareuna*/
+	.otayh-etu{
+		text-decoration: none;
+		background-color: #CDA34F;
+		border-radius: 44px;
+		cursor: pointer;
+		font-size: 30px;
+		text-align:center;
+		margin-bottom: 5%;
+		margin-top:40%;
+		margin-left:15%;
+		margin-right: 60%;
+		padding: 30px;
+		}
+		a:link{
+			text-decoration: none;
+		}
+		{
+	@media only screen and (max-width:620px) 
+{
+	.etusivu-info, .otayh-etu 
+	{width:100%;
+	margin: none;
+	background-image: none;}
+	
+}	
+				
+/*----- KOIRAMME -----*/
+	/*Kuvat ja tekstit rivissä*/
+	.column {
+	  float: left;
+	  width: 33.33%;
+	  padding: 5px;
+	}
+	/*kuvat menevät allekkain alle 620px*/
+	@media only screen and (max-width:620px) 
+	{
+		.column 
+		{width:100%;}
+	}
+
+/*----- PENTUSUUNNITELMAT -----*/
+	.tekstit{
+		width:100%;
+		text-align: center;
+		margin: 0 auto;
+		text-justify: inter-word;
+		}
+		#pentuteksti{
+			font-size: 35px;
+		}	
+	
+		@media only screen and (max-width:620px) 
+	{
+		.tekstit, .parent-div 
+		{padding: 0px;}
+		#pentuteksti{
+		font-size: 20px;
+		}
+	}	
+
+/*----- RODUSTA -----*/
+	.parallax {
+		background-image: url("makita.jpg");
+		height:100%;
+		/*parralax efekti*/
+		 background-attachment: fixed;
+		 background-position: center;
+		 background-repeat: no-repeat;
+		 background-size: cover;
+	}
+	.rotumaaritelma{
+		padding: 15px;
+		padding-bottom: 20px;
+	}
+	/*lopettaa parallax efektin kun ruutu on pienempi kuin 800px*/
+	@media only screen and (max-width:800px) 
+	{
+	.parallax {
+		background-attachment: scroll;
+		}
+	}
+	
+	@media only screen and (max-width:620px) 
+	{
+		.tekstit 
+		{padding: 0px;}
+		#rotumaaritelma{
+		font-size: 12px;
+		}
+		h3{
+			font-size: 15px;
+		}
+	}	
+	
+			
+/*----- OTA YHTEYTTÄ -----*/
+			/*Lomake*/
+			.wrapper{
+				background-color: #636B46;
+				border-radius: 8px;
+				padding: 30px;
+				border: 15px solid  #CDA34F;
+				width: 35%;
+				float: right;
+				margin-right:15%;
+				margin-top:5%;
+			}
+			.kentta{
+				padding: 10px;
+			}
+			
+			input, textarea{
+				background-color : #636B46;
+				border:2px solid #2D3706;
+				border-radius: 7px;
+				font-size: 20px;
+				width: 90%;
+			}
+			input{
+				width: 90%;
+				height: 53.66px;
+			}
+			#laheta{
+				color: #E9E7DA;
+				background-color: #CDA34F;
+				border-radius:44px;
+				padding: 15px;
+				font-size: 20px;
+				margin-left: 35%;
+				position: relative;
+				cursor: pointer;
+			}
+			label{
+				font-size: 22px;
+			}
+			/*yhteystiedot*/
+			.yhteystiedot{
+				width: 35%;
+				float: left;
+				text-align: center;
+				margin-left:5%;
+				margin-top:20%;
+				border: 10px solid  #CDA34F;
+				padding-bottom: 15px;
+				
+			}
+			/*Responsiivisuus*/
+			@media only screen and (max-width:620px) 
+			{
+				.wrapper, .yhteystiedot
+				{width:100%;
+				margin-right:0%;
+				margin-top:5%;
+				}
+				.yhteystiedot{
+					border: none;
+					font-size:15px;
+				}
+				input, textarea{
+					font-size: 12px;
+				}
+				label{
+					font-size: 15px;
+				}
+				#laheta{
+					padding: 10px;
+				font-size: 15px;
+				}
+			}
+			
+			
+/*-----KIRJAUDU----*/
+			.btn{
+				color: red;
+				
+			}
+			
+			
+			

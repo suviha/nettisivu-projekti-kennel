@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Kennel Kaamos</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="tyyli.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="main.js"></script>
+    </head>
+    <body>
+	
+	<!-- NAVIGOINTI-->
+	<div class="valikko" id="paavalikko">
+				<a href="etusivu.html" class="active"> Etusivu </a>
+				<a href="koiramme.html"> Koiramme </a>
+				<a href="pentusuunnitelmat.html"> Pentusuunnitelmat </a>
+				<a href="rodusta.html"> Rodusta </a>
+				<a href="otayhteytta.html" > Ota yhteyttä</a>
+				<a href="register.php">Rekisteröidy</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+					</a>
+				</div>
+				
+				<script>
+				function myFunction() 
+				{
+					var x = document.getElementById("paavalikko");
+					if (x.className === "valikko") {
+					x.className += " responsive";
+						} else {
+						x.className = "valikko";
+						}
+				}
+				</script>
+
+	
+	
+	<!--TAUSTAKUVA-->
+	<div class="pallot">
+	  <span class="pallot" id="pallo1"></span>
+	  <span class="pallot" id="pallo2"></span>
+	  <span class="pallot" id="pallo3"></span>
+	  <span class="pallot" id="pallo4"></span>
+	</div>
+	
+	
+	<!--OTSIKKO ja teksti-->
+	<div  class="paaotsikot">
+		<h1>Pentusuunnitelmat</h1>
+	</div>
+	
+	<div class="parent-div">	
+		<div class="tekstit" id="pentuteksti"><p >Pentuja suunnitteilla vuodelle 2021</p></div>
+	</div>
+    </body>
+</html>
